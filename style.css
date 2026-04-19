@@ -1,0 +1,135 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+}
+
+.container__svg{
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+}
+
+#container {
+    width: 300px;
+    height: 300px;
+    position: relative; /* Для правильного позиционирования маски */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+/* Высота для теста скролла */
+
+/* Стили попапа */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    z-index: 1001;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: none;
+    width: 90%;
+    max-width: 400px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Стили для демонстрации перемещения блоков */
+.mobile-box {
+    border: 2px dashed #ff4757;
+    padding: 10px;
+    margin-top: 10px;
+    min-height: 50px;
+}
+
+.desktop-box {
+    border: 2px dashed #2ed573;
+    padding: 10px;
+}
+
+.moving-block {
+    background: #1e90ff;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.is-highlighted {
+    background: #fff200 !important;
+    color: #000;
+}
+
+.swiper {
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    background: #eee;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+
+.container-gradient {
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+.interactive-svg {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.info {
+    display: none;/* Я специально скрыла лог для удобства использования, если что-то сломается, закоментируете */
+    margin: 20px;
+    padding: 10px;
+    background: #f0f0f0;
+    font-family: monospace;
+    max-width: 800px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}

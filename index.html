@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdaptiveCore Test</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">MyLib Test</div>
+      <div class="header-tools">
+        <div id="user-panel" class="moving-block">Профиль пользователя</div>
+      </div>
+    </header>
+
+    <div class="container">
+      <h2>1. Попапы</h2>
+      <button data-popup-target="myPopup">Открыть попап</button>
+
+      <hr />
+
+      <h2>2. Адаптив (Перемещение)</h2>
+      <p>
+        На широком экране синий блок в шапке. На <b>768px - 1024px</b> он
+        попадет в "Зону Планшета", ниже <b>768px</b> — в "Зону Мобилки".
+      </p>
+
+      <div class="tablet-box">
+        <strong>Зона Планшета (768-1024):</strong>
+        <div id="tablet-target" class="mobile-box"></div>
+      </div>
+
+      <div class="mobile-box">
+        <strong>Зона Мобилки (< 768):</strong>
+        <div id="mobile-target" class="mobile-box"></div>
+      </div>
+
+      <hr />
+
+      <h2>3. Слайдер Swiper</h2>
+      <div class="swiper" data-core-slider>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Слайд 1</div>
+          <div class="swiper-slide">Слайд 2</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div
+        class="swiper"
+        data-core-slider='{"slidesPerView": 3, "loop": true, "autoplay": {"delay": 3000}}'
+      >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Слайд 1</div>
+          <div class="swiper-slide">Слайд 2</div>
+          <div class="swiper-slide">Слайд 3</div>
+          <div class="swiper-slide">Слайд 4</div>
+        </div>
+      </div>
+      <div id="dynamic-container"></div>
+
+      <div id="myPopup" class="popup">
+        <span class="popup-close">&times;</span>
+        <h3>Привет!</h3>
+        <p>Скролл заблокирован, оверлей работает.</p>
+      </div>
+
+      <h2>1. SVG с разными градиентами для fill и stroke</h2>
+      <div id="gradientSvgContainer" class="container__svg"></div>
+
+      <h2>2. SVG с маской из PNG</h2>
+    <div id="maskedSvgContainer" class="container__svg"></div>
+
+      <h2>3. Интерактивный SVG с триггерами</h2>
+      <div id="interactiveSvgContainer" class="container__svg"></div>
+      <h2>4. Сложный градиент</h2>
+      <div class="container__svg" id="container"></div>
+      <div class="info" id="logInfo">
+        <strong>Лог событий:</strong><br />
+        Загрузка...
+      </div>
+    </div>
+    <script src="./library.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
