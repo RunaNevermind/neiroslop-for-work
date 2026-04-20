@@ -117,14 +117,6 @@ header {
     cursor: pointer;
 }
 
-.info {
-    display: none;/* Я специально скрыла лог для удобства использования, если что-то сломается, закоментируете */
-    margin: 20px;
-    padding: 10px;
-    background: #f0f0f0;
-    font-family: monospace;
-    max-width: 800px;
-}
 
 .error {
     color: red;

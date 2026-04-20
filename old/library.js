@@ -897,36 +897,6 @@ class SVGManager {
         return this.createSVGFromString(svgString);
     }
 
-    /**
-     * Загружает SVG для всех контейнеров по селектору.
-     * src берётся из data-src, маска — из data-mask (опционально).
-     * @param {string} selector - CSS-селектор контейнеров
-     * @param {Object} options  - Опции для loadSVGWithGradients (без src/maskImage — они берутся из data-атрибутов)
-     */
-    async loadSVGsFromContainers(selector, options = {}) {
-        const containers = document.querySelectorAll(selector);
-        const results = [];
-
-        for (const container of containers) {
-            const src = container.dataset.src;
-            if (!src) continue;
-
-            const containerOptions = { ...options };
-            if (container.dataset.mask) {
-                containerOptions.maskImage = container.dataset.mask;
-            }
-
-            try {
-                const result = await this.loadSVGWithGradients(src, container, containerOptions);
-                results.push(result);
-            } catch (error) {
-                console.error(`SVGManager: ошибка загрузки "${src}":`, error);
-            }
-        }
-
-        return results;
-    }
-
     destroy() {
         this.gradients.clear();
         this.masks.clear();

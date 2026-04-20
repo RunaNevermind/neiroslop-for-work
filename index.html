@@ -71,19 +71,15 @@
       </div>
 
       <h2>1. SVG с разными градиентами для fill и stroke</h2>
-      <div id="gradientSvgContainer" class="container__svg"></div>
+      <div data-svg="gradients" id="gradientSvgContainer" class="container__svg" data-src="./shape.svg"></div>
 
       <h2>2. SVG с маской из PNG</h2>
-    <div id="maskedSvgContainer" class="container__svg"></div>
+    <div data-svg="mask" id="maskedSvgContainer" class="container__svg"  data-src="./shape.svg" data-mask="./mask.png"></div>
 
       <h2>3. Интерактивный SVG с триггерами</h2>
-      <div id="interactiveSvgContainer" class="container__svg"></div>
+      <div data-svg="interactive" data-src="./shape.svg" id="interactiveSvgContainer" class="container__svg"></div>
       <h2>4. Сложный градиент</h2>
-      <div class="container__svg" id="container"></div>
-      <div class="info" id="logInfo">
-        <strong>Лог событий:</strong><br />
-        Загрузка...
-      </div>
+      <div data-svg="fullcss" data-src="./shape.svg" class="container__svg" id="container"></div>
     </div>
     <script src="./library.js"></script>
     <script src="./script.js"></script>
